@@ -55,7 +55,7 @@ class Project(models.Model):
 
 
 
-class AboutSection(models.Model):
+class SoftwareAboutSection(models.Model):
     title = models.CharField(max_length=100, default="About Me")
     paragraph_one = models.TextField()
     paragraph_two = models.TextField(blank=True)
@@ -67,7 +67,7 @@ class AboutSection(models.Model):
     
 
 
-class ContactMessage(models.Model):
+class SoftwareContactMessage(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()

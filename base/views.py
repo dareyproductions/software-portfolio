@@ -10,7 +10,7 @@ from django.core.mail import EmailMessage
 from django.utils.decorators import method_decorator
 
 
-from core.models import AboutSection, ContactMessage, Hero, Project, TechSkill
+from base.models import AboutSection, ContactMessage, Hero, Project, TechSkill
 
 # Create your views here.
 

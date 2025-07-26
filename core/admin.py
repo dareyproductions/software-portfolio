@@ -1,7 +1,7 @@
 # admin.py
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import AboutSection, ContactMessage, Hero, Project, TechSkill
+from .models import SoftwareAboutSection, SoftwareContactMessage, Hero, Project, TechSkill
 
 
 @admin.register(Hero)
@@ -22,12 +22,12 @@ class ProjectAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description', 'technologies')
 
 
-@admin.register(AboutSection)
+@admin.register(SoftwareAboutSection)
 class AboutSectionAdmin(admin.ModelAdmin):
     list_display = ['title']
 
 
-admin.site.register(ContactMessage)
+admin.site.register(SoftwareContactMessage)
 
 
 # Customize admin site headers

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ponmile Daramola | Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+</head>
+<body>
+    {% include 'core/nav.html' %}
+    {% include 'core/hero.html' %}
+    {% include 'core/projects.html' %}
+    {% include 'core/skills.html' %}
+    {% include 'core/about.html' %}
+    {% include 'core/contact.html' %}
+
+    <div id="toast" class="toast">
+        <div class="toast-title">Message Sent!</div>
+        <div class="toast-description">Thank you for your message. I'll get back to you soon.</div>
+    </div>
+
+    <footer>
+        <div class="border-t border-border py-8 px-4 sm-px-6 lg-px-8">
+            <div class="max-w-7xl mx-auto text-center text-muted-foreground">
+            <p>&copy; 2025 Darey Productions. All rights reserved.</p>
+        </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'script/scripts.js' %}"></script>
+</body>
+</html>

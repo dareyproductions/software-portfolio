@@ -1,0 +1,40 @@
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-description">
+                    Here are some of the projects I've worked on, showcasing my skills across different domains.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                {% for project in projects %}
+                    <div class="card {% if project.featured %}featured-card{% endif %}">
+                        <div class="card-header">
+                            <h3 class="card-title">{{ project.title }}</h3>
+                            <p class="card-description">{{ project.description }}</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="tags-container">
+                                {% for tag in project.tech_list %}
+                                    <span class="tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+
+                            <div class="buttons-container">
+                                {% if project.github_url %}
+                                    <a href="{{ project.github_url }}" class="btn btn-outline" target="_blank">View Code</a>
+                                {% endif %}
+                                {% if project.live_demo_url %}
+                                    <a href="{{ project.live_demo_url }}" class="btn btn-outline" target="_blank">Live Demo</a>
+                                {% elif project.in_development %}
+                                    <button class="btn btn-outline" disabled>In Development</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>

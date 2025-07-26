@@ -1,0 +1,43 @@
+    <section id="home" class="hero">
+        <div class="hero-container">
+        <div class="animate-fade-in">
+            <h1 class="hero-title">{{ hero.name }}</h1>
+        </div>
+
+        <div class="animate-fade-in animate-delay-1">
+            <p class="hero-subtitle">{{ hero.title }}</p>
+        </div>
+
+        <div class="animate-fade-in animate-delay-2">
+            <p class="hero-description">{{ hero.description }}</p>
+        </div>
+
+        <div class="animate-fade-in animate-delay-2">
+            <div class="tech-badges">
+                {% for skill in tech_skills %}
+                    <span class="badges">{{ skill.icon_svg|safe }} {{ skill.name }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+            <div class="animate-fade-in animate-delay-3">
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Get In Touch
+                    </a>
+                    <a href="{{hero.resume.url}}" class="btn btn-outline" id="downloadResume">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7,10 12,15 17,10"/>
+                            <line x1="12" x2="12" y1="15" y2="3"/>
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>

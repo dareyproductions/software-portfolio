@@ -10,7 +10,7 @@ from django.core.mail import EmailMessage
 from django.utils.decorators import method_decorator
 
 
-from core.models import SoftwareAboutSection, SoftwareContactMessage, Hero, Project, TechSkill
+from core.models import AboutSection, ContactMessage, Hero, Project, TechSkill
 
 # Create your views here.
 
@@ -26,7 +26,7 @@ def home(request):
 
     projects = Project.objects.all().order_by('-featured')
     
-    about = SoftwareAboutSection.objects.first()
+    about = AboutSection.objects.first()
 
     context = {'hero':hero, 'tech_skills': tech_skills,'skills_by_category': skills_by_category, 'projects': projects, 'about':about}
     return render(request, 'base.html', context)
@@ -44,7 +44,7 @@ class ContactFormView(View):
             message = data.get('message')
 
             # Save to DB
-            SoftwareContactMessage.objects.create(
+            ContactMessage.objects.create(
                 name=name,
                 email=email,
                 message=message

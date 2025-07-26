@@ -80,7 +80,7 @@ DATABASES = {
     'default': dj_database_url.config(default=os.environ.get("DATABASE_URL"))
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'videoportfolio_db',
+    #     'NAME': 'softwareportfolio_db',
     #     'USER': 'postgres',
     #     'PASSWORD': 'darexpon',
     #     'HOST': 'localhost',
